@@ -68,12 +68,15 @@
         }
         .chatbot-message{
             width: max-content;
-            max-width: 100%;
+            max-width: 84%;
             padding: 12px 18px;
             border-radius: 20px;
+            overflow-wrap: break-word;
         }
         .chatbot-user{
             border: 1px solid #d2d2d2;
+            max-width: 84%;
+            overflow-wrap: break-word;
         }
         .chatbot-bot{
             background-color: #f5f7fe;
@@ -208,8 +211,6 @@
                 document.getElementsByClassName("chatbot-body")[0].appendChild(newM)
             }
             CreateMessage("Hello! How can I help you ", "bot");
-            CreateMessage("Query", "user");
-            CreateMessage("I have a soln", "bot");
             const handleSubmit = (e)=>{
                 e.preventDefault();
                 var message = document.getElementById("chatbot-userinput-field").value;
